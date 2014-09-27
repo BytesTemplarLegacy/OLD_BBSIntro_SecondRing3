@@ -1,0 +1,12 @@
+CPU 80386
+  cs:034A55             push   bp                           
+  cs:034B 8BEC           mov    bp,sp                        
+  cs:034D 1E             push   ds                           
+
+  cs:034E 6633C9         xor    ecx,ecx                      
+  cs:0351 8B4E04         mov    cx,[bp+04]                   
+  cs:0354 C1E902         shr    cx,02                        
+  cs:0357 C47E06         les    di,[bp+06]                   
+  cs:035A C5760A         lds    si,[bp+0A]                   
+  cs:035D FC             cld                                 
+  cs:035E F366A5         rep movsd                           
